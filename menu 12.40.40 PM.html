@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PHO RANG DONG Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    /* Container that crops the right side */
+    .crop-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;     /* show only 70% of width */
+      height: 100%;
+      overflow: hidden; /* hide anything outside */
+      background: #fff;
+    }
+
+    /* PDF fill inside, but shifted to align left side */
+    embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;      /* scale to container width */
+      height: 100%;
+      border: none;
+      background: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .crop-container {
+        width: 100%; /* show full on small devices */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="crop-container">
+    <embed src="menu.pdf" type="application/pdf">
+  </div>
+</body>
+</html>
